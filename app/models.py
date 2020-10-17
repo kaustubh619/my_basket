@@ -28,7 +28,7 @@ class Products(models.Model):
     product_name = models.CharField(max_length=200)
     max_retail_price = models.IntegerField()
     discount = models.IntegerField()
-    selling_price = models.IntegerField()
+    selling_price = models.IntegerField(blank=True, null=True)
     images = models.TextField()
 
     def __str__(self):
